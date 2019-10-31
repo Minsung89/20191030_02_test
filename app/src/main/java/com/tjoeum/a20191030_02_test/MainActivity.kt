@@ -26,13 +26,16 @@ class MainActivity : AppCompatActivity() {
             var inputId = loginId.text.toString()
             var inputPw = loginPw.text.toString()
 
-            Toast.makeText(this, String.format("ID : %s, PW : %s", inputId, inputPw), Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this, String.format("ID : %s, PW : %s", inputId, inputPw), Toast.LENGTH_SHORT).show()
 
-            if(loginId.toString().equals("admin") && loginPw.toString().equals("1234")){
-                Toast.makeText(this, "관리자로 로그인합니다.", Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this, "아이디 혹은 비번이 잘못되었습니다.", Toast.LENGTH_SHORT).show()
-            }
+            val printStr = "ID : ${inputId.toLowerCase()}, PW : ${inputPw}"
+            Toast.makeText(this,"ID는 ${inputId.toLowerCase()}, PW : ${inputPw} 입니다",Toast.LENGTH_SHORT).show()
+
+//            if(loginId.toString().equals("admin") && loginPw.toString().equals("1234")){
+//                Toast.makeText(this, "관리자로 로그인합니다.", Toast.LENGTH_SHORT).show()
+//            } else {
+//                Toast.makeText(this, "아이디 혹은 비번이 잘못되었습니다.", Toast.LENGTH_SHORT).show()
+//            }
         }
     }
 }
